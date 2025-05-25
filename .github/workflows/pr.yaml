@@ -15,5 +15,12 @@ jobs:
         run: echo "welcome To Github Actions"
       - name: Second Step
         run: echo "This is the second step of the PR-Job"
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+      - name: Few Git Commands on checkedout Repo
+        run: |
+          git branch
+          echo "The Event was: ${{github.event}}"
+          echo ${{github.triggering_actor}}
 
 
