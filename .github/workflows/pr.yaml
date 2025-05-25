@@ -20,6 +20,7 @@ jobs:
       - name: Few Git Commands on checkedout Repo
         run: |
           git branch
+          echo "The Event was: ${{github.event}}"
           echo ${{github.triggering_actor}}
 
 
