@@ -1,0 +1,19 @@
+name: pr_validation
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+  push:
+    branches:
+      - develop
+jobs:
+  pr-validation-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Welcome Step
+        run: echo "welcome To Github Actions"
+      - name: Second Step
+        run: echo "This is the second step of the PR-Job"
+
+
